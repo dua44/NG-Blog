@@ -1,0 +1,28 @@
+<table [cellPadding]="8">
+    <tr>
+        <td colspan="2">
+            <h2>Developer Login</h2>
+        </td>
+    </tr>
+    <tr>
+        <td>Login Id :</td>
+        <td><input #loginId type="text" /></td>
+    </tr>
+    <tr>
+        <td>Login Password :</td>
+        <td><input #loginPassword type="password" /></td>
+    </tr>
+    <tr>
+        <td colspan="2" align="right">
+           {{errorMessage}} &nbsp; <button #btnlogin (click)="getlogincredentials(loginId.value,loginPassword.value,btnlogin)">Login</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Login Id : {{username}}</td>        
+    </tr>
+    <tr>        
+        <td>Login Password : {{password}}</td>
+    </tr>
+</table>
+  
+ 
