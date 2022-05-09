@@ -9,38 +9,43 @@ export class LoginComponent implements OnInit {
   username = "";
   password = "";
   errorMessage="";
+  disableButton=true;
   constructor() { }
 
   ngOnInit(): void {
   }
   validate(_username:any,_password:any)
-  {
-    debugger;
-    var flag = true;
+  {    
     if(_username=="" )
     {      
       console.log('here');
-      this.errorMessage = "please enter login Id";
-      flag = false;
-      return flag;
+      this.errorMessage = "please enter login Id";     
+    }
+    else{
+      this.errorMessage = "";
     }
     if(_password=="" )
-    {
-      
-      this.errorMessage = "please enter login Password";
-      flag = false;
-      return flag;
+    {      
+      this.errorMessage = "please enter login Password";     
     }
-    return flag;
+    else{
+      this.errorMessage = "";
+    }
+
+    if(_username!="" && _password!="")
+    {
+       this.disableButton = false;
+
+    }
+    
   }
   getlogincredentials(loginId:any,loginPassword:any,button:HTMLButtonElement){
-    if(this.validate(loginId,loginPassword))
-    {                
+                  
       this.disableloginButtion(button);
       this.errorMessage = "";
       this.username =loginId;    
       this.password = loginPassword;
-    }
+     
   }
   disableloginButtion(button:HTMLButtonElement)
   {

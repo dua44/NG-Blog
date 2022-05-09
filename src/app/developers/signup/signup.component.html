@@ -1,1 +1,22 @@
 <p>Developer Signup</p>
+
+<!-- <h1 *ngIf="show=='yes'; then ifblock else elseblock"> 
+    if Block
+
+</h1>
+<ng-template #ifblock>
+    <h1>if block</h1>
+</ng-template>
+<ng-template #elseblock>
+    <h1>else block</h1>
+</ng-template> -->
+
+<ng-template [ngIf]="show=='red'">
+<h1>Red Color</h1>
+</ng-template>
+<ng-template [ngIf]="show=='green'">
+<h1>Green Color</h1>
+</ng-template>
+<ng-template [ngIf]="show=='yellow'">
+<h1>Yellow Color</h1>
+</ng-template>

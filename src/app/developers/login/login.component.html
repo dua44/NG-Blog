@@ -6,19 +6,43 @@
     </tr>
     <tr>
         <td>Login Id :</td>
-        <td><input #loginId type="text" /></td>
-    </tr>
-    <tr>
-        <td>Login Password :</td>
-        <td><input #loginPassword type="password" /></td>
-    </tr>
-    <tr>
-        <td colspan="2" align="right">
-           {{errorMessage}} &nbsp; <button #btnlogin (click)="getlogincredentials(loginId.value,loginPassword.value,btnlogin)">Login</button>
+        <td><input 
+            #loginId 
+            type="text" 
+            (change)="validate(loginId.value,loginPassword.value)" 
+            />
         </td>
     </tr>
     <tr>
-        <td>Login Id : {{username}}</td>        
+        <td>
+            Login Password :
+        </td>
+        <td>
+            <input 
+            #loginPassword 
+            type="password" 
+            (change)="validate(loginId.value,loginPassword.value)"
+            />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="right">
+           {{errorMessage}} &nbsp; 
+           <button #btnlogin 
+           disabled={{disableButton}}
+           (click)="getlogincredentials(loginId.value,loginPassword.value,btnlogin)">Login</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          <input type="text" [value]="username" />
+          <br/>
+          <br/>
+          <input type="text" value={{password}}/>
+          <br/>
+          <br/>
+          Login Id : {{username}}
+        </td>        
     </tr>
     <tr>        
         <td>Login Password : {{password}}</td>
