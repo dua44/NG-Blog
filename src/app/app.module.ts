@@ -10,7 +10,8 @@ import { DevelopersModule} from './developers/developers.module';
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    DevelopersModule
+    DevelopersModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

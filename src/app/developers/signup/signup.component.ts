@@ -7,11 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
+  fullname="";
+  emailaddress="";
+  password = "";
+  confirmpassword="";
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  show = "green";
+  
+  signup(value:any)
+  {
+    console.log(value);
+    this.fullname = value.fullname;
+    this.emailaddress = value.emailaddress;
+    this.password = value.password;
+    this.confirmpassword = value.confirmpassword;
+  }
+  
 
 }

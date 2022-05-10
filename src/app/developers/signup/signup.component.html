@@ -10,7 +10,7 @@
 <ng-template #elseblock>
     <h1>else block</h1>
 </ng-template> -->
-
+<!-- <h1>NG IF</h1>
 <ng-template [ngIf]="show=='red'">
 <h1>Red Color</h1>
 </ng-template>
@@ -20,3 +20,76 @@
 <ng-template [ngIf]="show=='yellow'">
 <h1>Yellow Color</h1>
 </ng-template>
+<br>
+<br>
+<h1>NG SWITCH CASE</h1>
+<div [ngSwitch]="color">
+    <h2 *ngSwitchCase="'green'" style="color:green" >
+        Green Color
+    </h2>
+    <h2 *ngSwitchCase="'red'" style="color:red">
+        Red Color
+    </h2>
+    <h2 *ngSwitchCase="'blue'" style="color:blue">
+        Blue Color
+    </h2>
+    <h2 *ngSwitchCase="'yellow'" style="color:yellow">
+        Yellow Color
+    </h2>
+</div>
+<br>
+<br>
+<h1>Array Case</h1>
+<ul>
+<h4 *ngFor="let item of data">
+    <li>
+    Name : {{item.name}} <br>
+    Age : {{item.age}}<br>
+    Email : {{item.email}}
+    </li>
+</h4>
+</ul>
+<br>
+<br>
+<br> -->
+<form #developersignup="ngForm" (ngSubmit)="signup(developersignup.value)"   >
+<table [cellPadding]="8">
+    <tr>
+        <td>Name :</td>
+        <td>
+            <input type="text" ngModel name="fullname" placeholder="enter full name">
+        </td>
+    </tr>
+    <tr>
+        <td>Email :</td>
+        <td>
+            <input type="email" ngModel name="emailaddress" placeholder="enter email address">
+        </td>
+    </tr>
+    <tr>
+        <td>Password :</td>
+        <td>
+            <input type="password" ngModel name="password" placeholder="enter password">
+        </td>
+    </tr>
+    <tr>
+        <td>Confirm Password :</td>
+        <td>
+            <input type="password" ngModel name="confirmpassword" placeholder="enter confirm password">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="right">
+               <button>Signup</button>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="left">
+              Name : {{fullname}}<br>
+              Email Address : {{emailaddress}}<br>
+              Password : {{password}}<br>
+              Confirm Password : {{confirmpassword}}<br>
+        </td>
+    </tr>
+</table>
+</form>
