@@ -8,12 +8,15 @@ import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSliderModule} from '@angular/material/slider';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent    
+    FooterComponent,
+    UsersComponent    
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,8 @@ import {MatButtonModule} from '@angular/material/button';
     DevelopersModule, 
     NgbModule, 
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSliderModule
     
   ],
   providers: [],

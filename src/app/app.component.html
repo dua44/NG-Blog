@@ -1,7 +1,13 @@
 <app-header></app-header>
 <!-- <app-login></app-login>
 <app-signup></app-signup> -->
-<section>
+<h1>Pass Data Parent to Child Component</h1>
+
+<div *ngFor="let project of projectInfo">
+    <app-users [project]="project"></app-users>
+</div>
+
+<!-- <section>
   <div class="example-label">Basic</div>
   <div class="example-button-row">
     <button mat-button>Basic</button>
@@ -24,5 +30,22 @@
     <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
   </div>
 </section>
+<section>
+  <div>
+    <mat-slider aria-label="unit(s)"></mat-slider>
+  </div>
+</section>
+<section>
+  <div>
+    <mat-slider
+  thumbLabel
+  [displayWith]="formatLabel"
+  tickInterval="1000"
+  step="1000"
+  min="0"
+  max="100000"
+  aria-label="units"></mat-slider>
+  </div>
+</section> -->
 
 <app-footer></app-footer>
