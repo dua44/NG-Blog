@@ -1,11 +1,22 @@
 <app-header></app-header>
 <!-- <app-login></app-login>
 <app-signup></app-signup> -->
-<h1>Pass Data Parent to Child Component</h1>
+<h1>Pass Child Data to Parent Component</h1>
+<app-users (parentComponent)="parentComponent($event)"></app-users>
+<br>
+<br>
+<br>
+<h3>
+    {{name | titlecase}}<br> {{today | date:'fullDate'}}<br> {{str | slice:2}}
+</h3>
+<!-- <section>
+    single object pass to child component
+    <div *ngFor="let project of projectInfo">
+        <app-users [project]="project"></app-users>
+    </div>
+</section>
+<br> -->
 
-<div *ngFor="let project of projectInfo">
-    <app-users [project]="project"></app-users>
-</div>
 
 <!-- <section>
   <div class="example-label">Basic</div>

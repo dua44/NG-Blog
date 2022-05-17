@@ -68,4 +68,12 @@ export class AppComponent {
 
     return value;
   }
+name="";
+today=Date.now();
+str = "Hello Angular"
+  parentComponent(childdata:any)
+  {
+    console.log(childdata);
+    this.name = childdata.name
+  }
 }

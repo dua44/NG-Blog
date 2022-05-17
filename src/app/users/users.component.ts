@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-users',
@@ -6,11 +6,19 @@ import { Component, OnInit,Input } from '@angular/core';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
- @Input() project:any;
+ @Input() project:any; 
   constructor() { }
-
+  @Output() parentComponent : EventEmitter<any>= new EventEmitter();
   ngOnInit(): void {
-    console.log(JSON.stringify(this.project));
+    
+    console.log('project->'+JSON.stringify(this.project)); 
+    
+  }
+  SendData()
+  {
+    let item={name:"muhammad rIZwan",Age:14}
+    this.parentComponent.emit(item);
+
   }
 
 }
